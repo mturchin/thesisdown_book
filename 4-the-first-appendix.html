@@ -107,6 +107,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./"></a></li>
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="preliminary-content.html"><a href="preliminary-content.html"><i class="fa fa-check"></i>Preliminary Content</a><ul>
+<li class="chapter" data-level="" data-path="preliminary-content.html"><a href="preliminary-content.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="preliminary-content.html"><a href="preliminary-content.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="preliminary-content.html"><a href="preliminary-content.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="preliminary-content.html"><a href="preliminary-content.html#abstract"><i class="fa fa-check"></i>Abstract</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html"><i class="fa fa-check"></i><b>1</b> R Markdown Basics</a><ul>
 <li class="chapter" data-level="1.1" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#lists"><i class="fa fa-check"></i><b>1.1</b> Lists</a></li>
 <li class="chapter" data-level="1.2" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#line-breaks"><i class="fa fa-check"></i><b>1.2</b> Line breaks</a></li>
@@ -159,6 +165,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">Chapter 4</span> The First Appendix</h1>
 <p>This first appendix includes all of the R chunks of code that were hidden throughout the document (using the <code>include = FALSE</code> chunk tag) to help with readibility and/or setup.</p>
 <p><strong>In the main Rmd file</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This chunk ensures that the thesisdown package is</span>
+<span class="co"># installed and loaded. This thesisdown package includes</span>
+<span class="co"># the template files for the thesis.</span>
+if(!<span class="kw">require</span>(devtools))
+  <span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)
+if(!<span class="kw">require</span>(thesisdown))
+  devtools::<span class="kw">install_github</span>(<span class="st">&quot;ismayc/thesisdown&quot;</span>)
+<span class="kw">library</span>(thesisdown)</code></pre></div>
 <p><strong>In Chapter <a href="3-ref-labels.html#ref-labels">3</a>:</strong></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This chunk ensures that the reedtemplates package is</span>
 <span class="co"># installed and loaded. This reedtemplates package includes</span>
